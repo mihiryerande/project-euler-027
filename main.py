@@ -23,6 +23,7 @@
 #       starting with n = 0.
 
 from math import floor, sqrt
+from typing import Tuple
 
 # Global variables to keep track of primes as they are found
 PRIME_LIST = []
@@ -30,7 +31,7 @@ PRIME_SET = set()
 HIGHEST_CHECKED = 1
 
 
-def is_prime(x):
+def is_prime(x: int) -> bool:
     """
     Returns True iff `x` is prime.
     Keeps track of known primes up to highest `x` ever given to function, to avoid redundant calls.
@@ -41,7 +42,7 @@ def is_prime(x):
         x (int): Integer
 
     Returns:
-        True iff `x` is prime
+        (bool): True iff `x` is prime
     """
     global PRIME_LIST
     global PRIME_SET
@@ -70,7 +71,7 @@ def is_prime(x):
         return x in PRIME_SET
 
 
-def get_x_max(a, b):
+def get_x_max(a: int, b: int) -> int:
     """
     Returns maximum value `x_max`
       such that for given `a` and `b`,
@@ -82,7 +83,8 @@ def get_x_max(a, b):
         b (int): Integer
 
     Returns:
-        (int): Highest value of `x` consecutively up from zero, such that the quadratic formula produces all primes.
+        (int): Highest value of `x` consecutively up from zero,
+                 such that the quadratic formula produces all primes.
 
     Raises:
         AssertError: if incorrect args are given
@@ -102,7 +104,7 @@ def get_x_max(a, b):
     return x
 
 
-def main(n):
+def main(n: int) -> Tuple[int, int, int]:
     """
     Returns tuple of `a`, `b`, `x_max`,
       such that the quadratic formula x^2 + a*x + b
