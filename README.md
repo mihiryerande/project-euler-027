@@ -16,7 +16,7 @@ The product of the coefficients, −79 and 1601, is −126479.
 
 Considering quadratics of the form:
 
-$\qquad n^2 + an + b$, where $|a| < 1000$ and $|b| < 1000$
+$\qquad n^2 + an + b$, where $|a| < 1000, |b| \leq 1000$
 
 where $|n|$ is the modulus/absolute value of $n$,
 e.g. $|11| = 11$
